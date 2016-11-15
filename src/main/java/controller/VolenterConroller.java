@@ -16,12 +16,14 @@ public class VolenterConroller {
 	@Autowired
 	private VolenteerService volenteerService;
 
-	@ResponseBody
-	@RequestMapping(value = "/", method = RequestMethod.GET)
+	
+	@RequestMapping(value = "/volunteerview", method = RequestMethod.GET)
 	public String Index() {
-		volenteerService.getAllCustomer().forEach(System.out::println);
-		return "Hello";
+		volenteerService.getAllVolenteer().forEach(System.out::println);
+		return "volenteerview";
+	
+	}
 	
 	}
 
-}
+
